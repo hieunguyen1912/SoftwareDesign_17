@@ -1,20 +1,21 @@
 @extends('front.layout.master')
 
 @section('main_content')
-<div class="page-top" style="background-image: url('uploads/banner.jpg')">
+<div class="page-top" style="background-image: url('/uploads/banner.jpg'); background-size: cover; background-position: center; padding: 50px 0; position: relative;">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h2>Login</h2>
+            <div class="col-md-12 text-center text-white">
+                <h2 class="fw-bold">Login   </h2>
                 <div class="breadcrumb-container">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Login</li>
+                    <ol class="breadcrumb justify-content-center bg-transparent p-0">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item"><a href="" class="text-white">Login</a></li>
                     </ol>
                 </div>
             </div>
         </div>
     </div>
+    <div class="overlay"></div>
 </div>
 
 <div class="page-content pt_70 pb_70">

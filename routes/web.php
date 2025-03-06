@@ -79,7 +79,7 @@ Route::middleware('admin')->prefix('admin')->group(function() {
     Route::post('/users/create', [AdminUserController::class, 'user_create_submit'])->name('admin_user_create_submit');
     Route::get('/user/edit/{id}', [AdminUserController::class, 'user_edit'])->name('admin_user_edit');
     Route::post('/user/edit/{id}', [AdminUserController::class, 'user_edit_submit'])->name('admin_user_edit_submit');
-
+    Route::get('/user/delete/{id}', [AdminUserController::class, 'user_delete'])->name('admin_user_delete');
     
 });
 Route::prefix('admin')->group(function() {

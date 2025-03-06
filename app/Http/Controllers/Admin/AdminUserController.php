@@ -106,33 +106,16 @@ class AdminUserController extends Controller
         return redirect()->route('admin_users')->with('success','User is Updated Successfully');
     }
 
-    // public function user_delete($id)
-    // {
-    //     $total = Review::where('user_id',$id)->count();
-    //     if($total > 0)
-    //     {
-    //         return redirect()->back()->with('error','User can not be deleted because it has some reviews');
-    //     }
+    public function user_delete($id)
+    {
+        $obj = User::where('id', $id)->first();
+    
+        if ($obj->photo && file_exists(public_path('uploads/' . $obj->photo))) {
+            unlink(public_path('uploads/' . $obj->photo));
+        }
+        
+        $obj->delete();
 
-    //     $total1 = Message::where('user_id',$id)->count();
-    //     if($total1 > 0) {
-    //         return redirect()->back()->with('error','User can not be deleted because it has some messages');
-    //     }
-
-    //     $total2 = Wishlist::where('user_id',$id)->count();
-    //     if($total2 > 0) {
-    //         return redirect()->back()->with('error','User can not be deleted because it has some wishlist');
-    //     }
-
-    //     $total3 = Booking::where('user_id',$id)->count();
-    //     if($total3 > 0) {
-    //         return redirect()->back()->with('error','User can not be deleted because it has some bookings');
-    //     }
-
-    //     $obj = User::where('id',$id)->first();
-    //     unlink(public_path('uploads/'.$obj->photo));
-    //     $obj->delete();
-
-    //     return redirect()->route('admin_users')->with('success','User is Deleted Successfully');
-    // }
+        return redirect()->route('admin_users')->with('success','User is Deleted Successfully');
+    }
 }

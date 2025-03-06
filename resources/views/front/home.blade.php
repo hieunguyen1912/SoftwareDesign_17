@@ -61,8 +61,8 @@
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="destination-card shadow-sm">
                 <div class="destination-image">
-                    <a href="{{asset('destination', $destination->slug)}}">
-                        <img src="{{ asset('uploads/'.$destination->featured_photo) }}" alt="Image of {{ $destination->name }}">
+                    <a href="{{ route('destination', $destination->slug) }}">
+                        <img src="{{ asset('uploads/'.$destination->featured_photo) }}" class="card-img-top" alt="Image of Destination">
                     </a>
                 </div>
                 <div class="destination-body">
@@ -78,134 +78,6 @@
     </div>
 </div>
 
-
-
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h2 class="font-weight-bold">Popular Packages</h2>
-        <p class="text-muted">Explore our most popular travel packages around the world</p>
-    </div>
-    <div class="row">
-        <!-- Package 1 -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img alt="Image of Venice Grand Canal" class="card-img-top" src="https://placehold.co/600x400" />
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <h5 class="card-title mb-0">Venice Grand Canal</h5>
-                        <div class="badge badge-danger p-2">
-                            <span>$150</span>
-                            <span class="text-decoration-line-through">$250</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-muted ml-2">(4 Reviews)</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted mb-2">
-                        <i class="fas fa-plane mr-2"></i>
-                        <span>Italy</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted mb-2">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>14 Jun, 2024</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted">
-                        <i class="fas fa-users mr-2"></i>
-                        <span>25 Persons</span>
-                        <i class="fas fa-clock ml-4 mr-2"></i>
-                        <span>7 Days</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Package 2 -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img alt="Image of Great Barrier Reef" class="card-img-top" src="https://placehold.co/600x400" />
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <h5 class="card-title mb-0">Great Barrier Reef</h5>
-                        <div class="badge badge-danger p-2">
-                            <span>$230</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-muted ml-2">(0 Reviews)</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted mb-2">
-                        <i class="fas fa-plane mr-2"></i>
-                        <span>Australia</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted mb-2">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>23 Sep, 2024</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted">
-                        <i class="fas fa-users mr-2"></i>
-                        <span>12 Persons</span>
-                        <i class="fas fa-clock ml-4 mr-2"></i>
-                        <span>3 Days</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Package 3 -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img alt="Image of Similan Islands, Andaman Sea" class="card-img-top" src="https://placehold.co/600x400" />
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <h5 class="card-title mb-0">Similan Islands, Andaman Sea</h5>
-                        <div class="badge badge-danger p-2">
-                            <span>$540</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-muted ml-2">(34 Reviews)</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted mb-2">
-                        <i class="fas fa-plane mr-2"></i>
-                        <span>Thailand</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted mb-2">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>20 Jul, 2024</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted">
-                        <i class="fas fa-users mr-2"></i>
-                        <span>22 Persons</span>
-                        <i class="fas fa-clock ml-4 mr-2"></i>
-                        <span>5 Days</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="text-center mt-4">
-        <button class="btn btn-primary">View All Packages</button>
-    </div>
-</div>
 
 <div class="container py-5">
     <div class="text-center mb-5">
